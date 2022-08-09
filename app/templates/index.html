@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{home}}</title>
+</head>
+<body>
+    <h1>Olá {{user.username}}</h1>
+    <h2>Você tem {{user.idade}} anos e mora em {{user.endereco}}</h2>
+    {% for prefere in prefere %}
+    <p>{{prefere.esporte}}</p>
+    {% endfor %}
+</body>
+</html>
