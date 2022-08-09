@@ -7,8 +7,10 @@
 <body>
     <h1>Olá {{user.username}}</h1>
     <h2>Você tem {{user.idade}} anos e mora em {{user.endereco}}</h2>
-    {% for prefere in prefere %}
-    <p>{{prefere.esporte}}</p>
+    {% for users in users %}
+    <p>User off - Nome:{{users.username}} Idade:{{users.idade}} Cidade:{{users.endereco}}</p>
     {% endfor %}
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

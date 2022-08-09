@@ -9,20 +9,18 @@ def index():
         'idade': '18',
         'endereco': 'Mogi'
     }
-
-    prefere = [
+    users = [
         {
-        'esporte':'futebol',
-        'musica': 'rap',
-        'cor':'preto',
-        'passeio':'sítio'
+        'username': 'Erika',
+        'idade': '39',
+        'endereco': 'Poa'
         },
 
         {
-        'esporte':'futebol',
-        'musica': 'rap',
-        'cor':'preto',
-        'passeio':'sítio'
+        'username': 'Rafael',
+        'idade': '12',
+        'endereco': 'Ferraz'
         }
     ]
-    return render_template('index.html', user=user, home='Página Principal', prefere=prefere)
+
+    return render_template('index.html', user=user, home='Página Principal', users=users)
