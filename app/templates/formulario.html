@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de login</title>
+</head>
+<body>
+{% extends "index.html" %}
+
+{% block content %}
+    <h1>Inscreva-se</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            <label>Nome</label><br>
+            {{ form.nome(size=32) }}
+        </p>
+        <p>
+            <label>Senha</label><br>
+            {{ form.senha(size=32) }}
+        </p>
+        <p>{{ form.lembredemim() }} <label>Lembre-se de mim</label><br></p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
+</body>
+</html>

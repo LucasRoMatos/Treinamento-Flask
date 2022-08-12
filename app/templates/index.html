@@ -5,12 +5,19 @@
     <title>{{home}}</title>
 </head>
 <body>
-    <h1>Olá {{user.username}}</h1>
-    <h2>Você tem {{user.idade}} anos e mora em {{user.endereco}}</h2>
-    {% for users in users %}
-    <p>User off - Nome:{{users.username}} Idade:{{users.idade}} Cidade:{{users.endereco}}</p>
-    {% endfor %}
+    <h1>Olá {{ current_user.username }}</h1>
     {% block content %}
     {% endblock %}
+
+    <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
 </body>
 </html>
